@@ -1,0 +1,245 @@
+$primary-blue: #215184;
+$font-color: #545454;
+$font-family: "Brandon Grotesque", Arial, Helvetica, sans-serif;
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("../assets/font/BrandonGrotesque-Bold.woff2") format("woff2"),
+    url("../assets/font/BrandonGrotesque-Bold.woff") format("woff"),
+    url("../assets/font/BrandonGrotesque-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("../assets/font/BrandonGrotesque-Regular.woff2") format("woff2"),
+    url("../assets/font/BrandonGrotesque-Regular.woff") format("woff"),
+    url("../assets/font/BrandonGrotesque-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("../assets/font/BrandonGrotesque-RegularItalic.woff2")
+      format("woff2"),
+    url("../assets/font/BrandonGrotesque-RegularItalic.woff") format("woff"),
+    url("../assets/font/BrandonGrotesque-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("../assets/font/BrandonGrotesque-Black.woff2") format("woff2"),
+    url("../assets/font/BrandonGrotesque-Black.woff") format("woff"),
+    url("../assets/font/BrandonGrotesque-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("../assets/font/BrandonGrotesque-Medium.woff2") format("woff2"),
+    url("../assets/font/BrandonGrotesque-Medium.woff") format("woff"),
+    url("../assets/font/BrandonGrotesque-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+  overflow-x: hidden;
+}
+// Navbar styling
+.navbar {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+
+  box-shadow: gray;
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+
+    figure {
+      display: flex;
+      align-items: center;
+      .spacex-logo {
+        width: 11rem;
+        margin-left: 10px;
+      }
+      figcaption {
+        margin: 0 auto;
+        color: $font-color;
+        font-size: 15px;
+        opacity: 70%;
+        cursor: default;
+      }
+    }
+    .reload-btn {
+      overflow: hidden;
+      background-color: $primary-blue;
+      cursor: pointer;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+
+      &:focus {
+        border: none;
+        outline: none;
+      }
+      img {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+//Body styling
+.launch-container {
+  width: 100vw;
+  display: flex;
+
+  .img-container {
+    overflow: hidden;
+    width: 45vw;
+    position: relative;
+
+    img {
+      margin: 0 auto;
+      display: block;
+      max-width: 70%;
+    }
+  }
+  .launch-list-container {
+    width: 52vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3vw;
+    .sort-container {
+      overflow: visible;
+      width: 90%;
+      .sort-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        .select-btn {
+          background-color: $primary-blue;
+          cursor: pointer;
+          color: white;
+          border: none;
+          padding: 10px;
+          font-size: 12px;
+          margin-right: 10px;
+        }
+        .sort-btn {
+          overflow: hidden;
+          cursor: pointer;
+          background-color: $primary-blue;
+          color: white;
+          border: none;
+          padding: 10px;
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          margin-right: 10px;
+
+          img {
+            margin-left: 5px;
+          }
+        }
+      }
+      .rocket-container {
+        color: $font-color;
+        margin-top: 10px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        box-shadow: 1px 1px 5px 0px;
+        border-radius: 10px;
+        .flight-container {
+          display: flex;
+          align-items: center;
+          h2 {
+            margin-right: 3rem;
+          }
+        }
+        .date-container {
+          display: flex;
+          justify-content: flex-end;
+          .date-name-box {
+            display: flex;
+            text-align: right;
+            flex-flow: column;
+          }
+        }
+      }
+    }
+  }
+}
+//Loading text styling
+.loading-container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+// small screen size
+
+@media screen and (max-width: 900px) {
+  //navbar design
+  .navbar {
+    .nav-center {
+      figure {
+        .spacex-logo {
+          width: 6rem;
+          margin-left: 5px;
+        }
+        figcaption {
+          font-size: 10px;
+        }
+      }
+      .reload-btn {
+        font-size: 8px;
+      }
+    }
+  }
+  //body design
+  .launch-container {
+    .img-container {
+      display: none;
+    }
+    .launch-list-container {
+      width: 100vw;
+      .sort-container {
+        .sort-btn-container {
+          .sort-btn {
+            font-size: 8px;
+            .sort-icon {
+              margin-left: 3px;
+              width: 10px;
+            }
+          }
+          .select-btn {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+  }
+}
